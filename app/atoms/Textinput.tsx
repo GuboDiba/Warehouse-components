@@ -6,7 +6,8 @@ interface TextInputProps {
   placeholder?: string;
   disabled?: boolean;
   label?: string;
-}
+  className?: string;
+  children?: React.ReactNode;}
 
 const TextInput: React.FC<TextInputProps> = ({
   value,
@@ -14,6 +15,8 @@ const TextInput: React.FC<TextInputProps> = ({
   placeholder,
   disabled = false,
   label,
+  className,
+  children,
 }) => {
   return (
     <div className="text-input">
@@ -24,9 +27,13 @@ const TextInput: React.FC<TextInputProps> = ({
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
         disabled={disabled}
+        className={` ${className}`}
       />
+       {children}
     </div>
   );
 };
 
 export default TextInput;
+
+

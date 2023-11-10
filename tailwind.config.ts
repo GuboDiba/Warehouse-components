@@ -20,10 +20,10 @@ const config: Config = {
       theme: {
         extend: {
           backgroundColor: {
-            primary: '#60C1C6',
-            secondary: '#your-secondary-color',
-            subtle: '#your-subtle-color',
-            text: '#your-text-color',
+            'custom-initial': '#60C1C6',
+            'custom-hover': '#247B80',
+            'custom-focus': ' #E4DAFF',
+            'custom-active': '#14142B',
           },
         },
       },
